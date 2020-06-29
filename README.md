@@ -23,3 +23,4 @@
 1. Changes to the app.css file including login style
 2. Changes to the layout.html include the new link to the app.css
 3. Changes to login.html including the form new style, add new input to the form andmore
+4. Added working movie search page
