@@ -1,8 +1,46 @@
-body {
-    text-align:center;
+body,html {
+	height: 100%
+ }
+
+.bg {
+  /* The image used */
+  background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(11).jpg"); 
+
+  /* full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  padding-top: 250px;
+
 }
 
-table {
-    margin: 0 auto;
+h1, p{
+  text-align: center;
 }
 
+h3 {
+  font-weight: 500;
+  font-family: 'Fira Sans', sans-serif;
+  text-align: center;
+  margin: 0;
+  line-height: 1;
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+
+.auth-inner {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+  background: #ffffff;
+  width: 450px;
+   
+  padding: 40px 55px 45px 55px;
+  border-radius: 15px;
+}
