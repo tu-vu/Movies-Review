@@ -15,3 +15,8 @@
 4. set FLASK_ENV=development (cái này để mỗi khi mình modify any file thì website nó sẽ auto-update, ko phải run lại)
 5. flask run (Bắt buộc phải chạy cái này everytime run app)
 6. Rồi copy cái URL http://127.0.0.1:5000/ lên browser và chạy :+1:
+
+## Update
+1. Changes to the app.css file including login style
+2. Changes to the layout.html include the new link to the app.css
+3. Changes to login.html including the form new style, add new input to the form andmore
