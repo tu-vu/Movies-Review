@@ -13,13 +13,7 @@ api_key="2f0dbac34c4d747c83895d65efad8073"
 def index():
     return render_template("index.html")
 
-@app.route("/login", methods=["POST"])
-def login():
-    email = request.form.get("email")
-    password = request.form.get("password")
-    return render_template("login.html", email=email, password=password)
-
-@app.route("/search")
+@app.route("/search", methods=["POST"])
 def search():
     return render_template("search.html")
 
@@ -32,4 +26,3 @@ def movies():
     if res.status_code == 200:
         results = res.json()['results']
     return render_template("movies.html", results=results)
-    
