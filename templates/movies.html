@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block header%}
+    Here are all the results
+{% endblock %}
+
+{% block body %}
+    {% if results %}
+        <table>
+            <tr>
+                <th>Title</th>
+                <th>Released Date</th>
+            </tr>
+            {% for result in results %}
+                <tr>
+                    <td>{{ result['title'] }}</td>
+                    <td>{{ result['release_date'] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>Sorry, No results found!</p>
+    {% endif %}
+{% endblock %}
