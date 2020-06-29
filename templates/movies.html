@@ -8,12 +8,16 @@
     {% if results %}
         <table>
             <tr>
+                <th>Poster</th>
                 <th>Title</th>
+                <th>Metascore</th>
                 <th>Released Date</th>
             </tr>
             {% for result in results %}
                 <tr>
+                    <td><img src="http://image.tmdb.org/t/p/w185/{{ result['poster_path'] }}"></td>
                     <td>{{ result['title'] }}</td>
+                    <td>{{ result['vote_average'] }}</td>
                     <td>{{ result['release_date'] }}</td>
                 </tr>
             {% endfor %}
