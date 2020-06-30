@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block header%}
+    {{ movie_info['title'] }}
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img src="http://image.tmdb.org/t/p/w300/{{ movie_info['backdrop_path']}}">
+            </div>
+            <div class="col">
+                <h2>Overview</h2>
+                <p>{{ movie_info['overview'] }}</p>
+            </div>
+        </div>
+    </div>
+    <h2>Reviews</h2>
+    <input type="" name="">
+
+{% endblock %}
