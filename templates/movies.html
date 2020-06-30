@@ -16,7 +16,7 @@
             {% for result in results %}
                 <tr>
                     <td><img src="http://image.tmdb.org/t/p/w185/{{ result['poster_path'] }}"></td>
-                    <td>{{ result['title'] }}</td>
+                    <td><a href="{{ url_for('movie', movie_id=result['id'], movie_title=result['title']) }}">{{ result['title'] }}</a></td>
                     <td>{{ result['vote_average'] }}</td>
                     <td>{{ result['release_date'] }}</td>
                 </tr>
