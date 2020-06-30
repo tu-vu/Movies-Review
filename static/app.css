@@ -1,6 +1,6 @@
 body,html {
 	height: 100%;
-    text-align: center;
+  text-align: center;
  }
 
 .bg {
@@ -57,4 +57,32 @@ h3 {
    
   padding: 40px 55px 45px 55px;
   border-radius: 15px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  height: 100%;
+  padding: 0%;
+}
+
+.div1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("https://i.ytimg.com/vi/WQmGwmc-XUY/maxresdefault.jpg");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.center {
+  direction: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+  width: 80%;
+  padding: 300px;
 }

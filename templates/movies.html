@@ -6,13 +6,16 @@
 
 {% block body %}
     {% if results %}
-        <table>
+        <table class="table table-bordered" style="background-color: #D8BFD8">
+            <thead class="text-white" style="background-color: #212121">
             <tr>
                 <th>Poster</th>
                 <th>Title</th>
                 <th>Metascore</th>
                 <th>Released Date</th>
             </tr>
+            </thead>
+            <tbody>
             {% for result in results %}
                 <tr>
                     <td><img src="http://image.tmdb.org/t/p/w185/{{ result['poster_path'] }}"></td>
@@ -21,6 +24,7 @@
                     <td>{{ result['release_date'] }}</td>
                 </tr>
             {% endfor %}
+            </tbody>
         </table>
     {% else %}
         <p>Sorry, No results found!</p>
