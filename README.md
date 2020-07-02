@@ -26,3 +26,5 @@
 4. Added working movie search page
 5. New changes to app.css for using new style
 6. Update to search.html and movies.html for new style
+7. Update new login and sign-up form
+8. Fix problem with search style
