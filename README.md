@@ -10,6 +10,9 @@
 6. pip install FlaskSQLAlchemy
 7. pip install psycopg2
 8. pip install requests
+9. pip install flask-login
+10. pip install flask flask-wtf
+11. pip install wtforms[email]
 
 ## Run Guide (Use command line)
 1. Move to Movies-Review directory

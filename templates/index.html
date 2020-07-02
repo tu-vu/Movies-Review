@@ -21,17 +21,19 @@
                     <input type="password" class="form-control" placeholder="Enter password" name="password"/>
                 </div>
 
-                <div class="form-group">
+<!--            <div class="form-group">
                     <div class="custom-control custom-checkbox">
                         <input type="checkbox" class="custom-control-input" id="customCheck1" />
                         <label class="custom-control-label" htmlFor="customCheck1">Remember me</label>
                     </div>
                 </div>
 
-                <input type="submit" class="btn btn-primary btn-block" value="Sign in">
                 <p class="forgot-password text-right">
                     Forgot <a href="#">password?</a>
-                </p>
+                </p> -->
+
+                <input type="submit" class="btn btn-primary btn-block" value="Sign in">
+                <a href="{{ url_for('signup') }}">Sign Up</a>
         </form>
     </div>
 </div>
