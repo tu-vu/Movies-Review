@@ -13,6 +13,7 @@
 9. pip install flask-login
 10. pip install flask flask-wtf
 11. pip install wtforms[email]
+12. pip install Flask-Security
 
 ## Run Guide (Use command line)
 1. Move to Movies-Review directory
@@ -31,3 +32,6 @@
 6. Update to search.html and movies.html for new style
 7. Update new login and sign-up form
 8. Fix problem with search style
+9. Update again: Login and sign-up form
+10. Add user authentication functionality to website
+11. Change a little styling for testing purpose
