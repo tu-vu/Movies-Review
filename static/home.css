@@ -1,0 +1,83 @@
+body {
+  text-align: center;
+
+  background-image: url('/static/images/home.jpg');
+
+  /* full height */
+  height: 100%;
+  width: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  padding-top: 150px;
+}
+
+table {
+    margin: 0 auto;
+}
+
+th, td {
+    padding: 15px 35px;
+}
+
+.row {
+    margin: 50px 0;
+}
+
+
+h1, p{
+  text-align: center;
+}
+
+h3 {
+  font-weight: 500;
+  font-family: 'Fira Sans', sans-serif;
+  text-align: center;
+  margin: 0;
+  line-height: 1;
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+
+.auth-inner {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+  background: #ffffff;
+  width: 450px;
+   
+  padding: 30px 30px;
+  border-radius: 15px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  height: 100%;
+  padding: 0%;
+}
+
+.div1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.center {
+  direction: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+  width: 80%;
+  padding: 300px;
+}

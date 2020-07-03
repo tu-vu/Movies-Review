@@ -21,7 +21,21 @@ db.init_app(app)
 with app.app_context():
     db.create_all()
 
-############################ ROUTES ############################
+############################ AUTHENTICATION ############################
+# Given *user_id*, return the associated User object. Also, we can access current user info via current_user.attribute
+@login_manager.user_loader
+def load_user(user_id):
+    """ Check if user is logged-in on every page load. """
+    if user_id:
+        return User.query.get(user_id)
+    return None
+
+@login_manager.unauthorized_handler
+def unauthorized():
+    """ Redirect unauthorized users to Login page. """
+    flash("You must be logged in to view that page")
+    return redirect(url_for('login'))
+
 @app.route("/", methods=["GET", "POST"])
 def login():
     """
@@ -83,24 +97,23 @@ def signup():
             flash("A user already exists with that email address.")
     return render_template("signup.html", form=form)
 
-@app.route("/search")
+############################ ROUTES ############################
+@app.route("/search", methods=["GET", "POST"])
 @login_required
 def search():
-    # TODO: Learn about form validation using WTForm 
     form = SearchForm()
     if form.validate_on_submit():
-        return redirect(url_for('movies'))
+        # Redirect user to page that displays relevant movies based on user query
+        return redirect(url_for('movies', query=form.query.data))
     return render_template("search.html", form=form)
 
-@app.route("/search/movies", methods=["POST"])
+@app.route("/search/movies")
 @login_required
 def movies():
-    global API_KEY
-    # Retrieve input from users
-    title = request.form.get("title")
+    query = request.args.get("query")
 
-    # GET list of movies with related title
-    res = requests.get("https://api.themoviedb.org/3/search/movie?", params={"api_key": API_KEY, "query": title})
+    # GET list of related movies
+    res = requests.get("https://api.themoviedb.org/3/search/movie?", params={"api_key": Config.API_KEY, "query": query})
 
     # Make sure request works
     if res.status_code != 200:
@@ -109,16 +122,14 @@ def movies():
     # Convert response into nice json format
     results = res.json()['results']
 
-    # Redirect users to a new html page
+    # Register movies page view to user
     return render_template("movies.html", results=results)
 
 @app.route("/search/movies/<int:movie_id>/<string:movie_title>", methods=["GET","POST"])
 @login_required
 def movie(movie_id, movie_title):
-    global API_KEY
-    
     # GET movie's details with its id 
-    res = requests.get("https://api.themoviedb.org/3/movie/" + str(movie_id), params={"api_key": API_KEY})
+    res = requests.get("https://api.themoviedb.org/3/movie/" + str(movie_id), params={"api_key": Config.API_KEY})
 
     # Make sure request works
     if res.status_code != 200:
@@ -130,16 +141,3 @@ def movie(movie_id, movie_title):
     # Redirect users to a new html page
     return render_template("movie.html", movie_info=movie_info)
 
-# Given *user_id*, return the associated User object
-@login_manager.user_loader
-def load_user(user_id):
-    """ Check if user is logged-in on every page load. """
-    if user_id:
-        return User.query.get(user_id)
-    return None
-
-@login_manager.unauthorized_handler
-def unauthorized():
-    """ Redirect unauthorized users to Login page. """
-    flash("You must be logged in to view that page")
-    return redirect(url_for('login'))

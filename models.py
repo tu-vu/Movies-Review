@@ -43,11 +43,8 @@ class Review(db.Model):
     text = db.Column(db.String, nullable=False)
 
     # Name of reviewer
-    author = db.Column(db.String, nullable=False)
+    author = db.Column(db.String, db.ForeignKey('users.username') , nullable=False)
 
     # Time when the review was made
     # No need to worry about this since we already default it to "now"
     timestamp = db.Column(db.DateTime(), default=datetime.utcnow, index=True)
-
-    # Declare a foreign key - link to other tables
-    user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
