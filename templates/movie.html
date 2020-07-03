@@ -16,7 +16,11 @@
             </div>
         </div>
     </div>
+    <a href="{{ url_for('logout') }}" style="font-size: 30px">Sign out</a>
     <h2>Reviews</h2>
-    <input type="" name="">
+    <form action="{{ url_for('movie', movie_id=movie_info['id'], movie_title=movie_info['title']) }}" method="post">
+        <input type="text" name="review" placeholder="Enter review here">
+    </form>
+
 
 {% endblock %}
