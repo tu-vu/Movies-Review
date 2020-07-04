@@ -1,4 +1,4 @@
-body {
+body,html {
   text-align: center;
 
   background-image: url('/static/images/home.jpg');
@@ -28,7 +28,7 @@ th, td {
 }
 
 
-h1, p{
+h1,p{
   text-align: center;
 }
 
@@ -55,29 +55,3 @@ h3 {
   border-radius: 15px;
 }
 
-.flex-container {
-  display: flex;
-  flex-direction: column;
-  background-color: black;
-  height: 100%;
-  padding: 0%;
-}
-
-.div1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.center {
-  direction: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: auto;
-  width: 80%;
-  padding: 300px;
-}
