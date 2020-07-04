@@ -15,14 +15,27 @@
                 <p>{{ movie_info['overview'] }}</p>
             </div>
         </div>
+
+        <h3 style="text-align: left">User reviews</h3>
+
+        <form id="review" action="{{ url_for('movie', movie_id=movie_info['id'], movie_title=movie_info['title']) }}" method="post">
+            {{ form.csrf_token }}
+            
+            <fieldset>
+                {{ form.rating(class="form-control mr-sm-2") }}
+            </fieldset>
+
+            <fieldset>
+                {{ form.text(class="form-control mr-sm-2", placeholder="Type your review here") }}
+            </fieldset>
+            {{ form.submit(class="btn btn-outline-success btn-rounded btn-sm my-0 mt-2 mb-5 text-right") }}
+        </form>
+
+        {% for review in reviews %}
+            <h4>{{ review.author }}</h4>
+            <p class="text-info">{{ review.rating }}</p>
+            <p> {{ review.text }}</p>
+            <hr>
+        {% endfor %}
     </div>
-    <a href="{{ url_for('logout') }}" style="font-size: 30px">Sign out</a>
-
-    <h2>Welcome {{ current_user.username }}!</h2>
-    <h2>Reviews</h2>
-    <form action="{{ url_for('movie', movie_id=movie_info['id'], movie_title=movie_info['title']) }}" method="post">
-        <input type="text" name="review" placeholder="Enter review here">
-    </form>
-
-
 {% endblock %}

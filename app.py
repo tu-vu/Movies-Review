@@ -22,7 +22,8 @@ with app.app_context():
     db.create_all()
 
 ############################ AUTHENTICATION ############################
-# Given *user_id*, return the associated User object. Also, we can access current user info via current_user.attribute
+# Given *user_id*, return the associated User object. 
+# Also, we can access current user info via current_user.attribute
 @login_manager.user_loader
 def load_user(user_id):
     """ Check if user is logged-in on every page load. """
@@ -54,8 +55,6 @@ def login():
         # If user exists in our database and password matches
         if user and user.password == form.password.data:
             login_user(user) # Log in as existing user
-            # next_page = request.args.get('next') # Get recent page users trying to view
-            # return redirect(next_page or url_for('search'))
             return redirect(url_for('search'))
         elif not user:
             flash("Account does not exists!")
@@ -86,7 +85,9 @@ def signup():
             # Check if username already exists
             existing_username = User.query.filter_by(username=form.username.data).first()
             if existing_username is None:
-                user = User(username=form.username.data, email=form.email.data, password=form.password.data)
+                user = User(username=form.username.data, 
+                            email=form.email.data, 
+                            password=form.password.data)
                 db.session.add(user)
                 db.session.commit() # Create new user
                 login_user(user) # Log in as newly created user - magically!
@@ -125,9 +126,13 @@ def movies():
     # Register movies page view to user
     return render_template("movies.html", results=results)
 
-@app.route("/search/movies/<int:movie_id>/<string:movie_title>", methods=["GET","POST"])
+@app.route("/search/movies/<string:movie_title>", methods=["GET","POST"])
 @login_required
-def movie(movie_id, movie_title):
+def movie(movie_title):
+    form = ReviewForm()
+
+    movie_id = request.args.get("movie_id")
+
     # GET movie's details with its id 
     res = requests.get("https://api.themoviedb.org/3/movie/" + str(movie_id), params={"api_key": Config.API_KEY})
 
@@ -138,6 +143,16 @@ def movie(movie_id, movie_title):
     # Convert response into nice json format
     movie_info = res.json()
 
-    # Redirect users to a new html page
-    return render_template("movie.html", movie_info=movie_info)
+    # Check if user is accessing page via POST request
+    if form.validate_on_submit(): 
+        # Add user's review to database
+        current_user.add_review(movie_title=movie_info['title'], rating=form.rating.data, text=form.text.data)
 
+        # Redirect user to current page instead of directly render_template (which might results in duplicate POST requests!)
+        return redirect(url_for('movie', form=form, movie_title=movie_title, movie_id=movie_id))
+
+    # Get list of reviews for current movie
+    reviews = Review.query.filter_by(movie_title=movie_title).all()
+
+    # Register movie info view for users
+    return render_template("movie.html", form=form, movie_info=movie_info, reviews=reviews) 

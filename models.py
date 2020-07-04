@@ -20,8 +20,8 @@ class User(UserMixin, db.Model):
     # lazy = True means we will only load data when it's accessed
     reviews = db.relationship("Review", backref="user",lazy=True)
 
-    def add_review(self, rating, text):
-        review = Review(rating=rating, text=text, author=self.username)
+    def add_review(self, movie_title, rating, text):
+        review = Review(movie_title= movie_title, rating=rating, text=text, author=self.username)
         db.session.add(review)
         db.session.commit()
 
@@ -34,7 +34,7 @@ class Review(db.Model):
     id = db.Column(db.Integer, primary_key=True)
 
     # Which movie to be reviewd
-    movie = db.Column(db.String, nullable=False)
+    movie_title = db.Column(db.String, nullable=False)
 
     # Rating review (on a scale from 1-5, 5 being excellent, 1 being worst etc)
     rating = db.Column(db.Integer, nullable=False)
