@@ -1,29 +1,42 @@
-body,html {
+html {
+  /* Scale the size to fully cover parent(browser) */
   height: 100%;
 }
 
-.flex-container {
-  display: flex;
-  flex-direction: column;
-  background-color: black;
-  height: 100%;
-  padding: 0%;
-}
-
-.div1 {
-  display: flex;
-  flex-direction: column;
+body {
   background-image: url('/static/images/cinematic.jpg');
-  justify-content: center;
-  background-size: cover;
+
+  /* Scale the size to fully cover parent(html) */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
+
+  /*Center every text in page*/
+  text-align: center;
 }
 
-.center {
-  direction: flex;
-  flex-direction: row;
+#header {
+  background-color: black;
+}
+
+#header h1, h5 {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+}
+
+#content {
+  margin-top: 275px;
+}
+
+form {
   justify-content: center;
-  margin: auto;
-  width: 80%;
-  padding: 300px;
+}
+
+#copyright {
+  margin-top: 14em;
+  color: white;
 }

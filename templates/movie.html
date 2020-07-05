@@ -35,6 +35,7 @@
             <h4>{{ review.author }}</h4>
             <p class="text-info">{{ review.rating }}</p>
             <p> {{ review.text }}</p>
+            <span id="time">{{ review.timestamp.strftime('%m-%d-%Y') }}</span>
             <hr>
         {% endfor %}
     </div>

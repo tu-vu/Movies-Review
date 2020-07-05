@@ -8,13 +8,13 @@ body {
 
   /* Scale the size to fully cover parent(html) */
   height: 100%;
-  width: 100%;
 
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
+  /*Add padding top to make form center*/
   padding-top: 150px;
 
   font-family: 'Roboto', sans-serif;
