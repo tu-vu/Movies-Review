@@ -6,6 +6,7 @@
 
 {% block body %}
     <div class="d-flex flex-column container-fluid" id="movieStyle">
+        <h1 style="text-align: center; background-color: black; width: 1700px;" class="text-white"> {{ movie_info['title'] }} </h1>
         <div class="d-flex flex-column">
             <div class="row">
                 <img src="http://image.tmdb.org/t/p/w300/{{ movie_info['backdrop_path']}}" class="image_center">
