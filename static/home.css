@@ -1,9 +1,12 @@
-body,html {
-  text-align: center;
+html {
+  /* Scale the size to fully cover parent(browser) */
+  height: 100%;
+}
 
+body {
   background-image: url('/static/images/home.jpg');
 
-  /* full height */
+  /* Scale the size to fully cover parent(html) */
   height: 100%;
   width: 100%;
 
@@ -13,45 +16,28 @@ body,html {
   background-size: cover;
 
   padding-top: 150px;
+
+  font-family: 'Roboto', sans-serif;
 }
 
-table {
-    margin: 0 auto;
-}
+form {
+  background-color: white;
 
-th, td {
-    padding: 15px 35px;
-}
+  width: 350px;
 
-.row {
-    margin: 50px 0;
-}
-
-
-h1,p{
-  text-align: center;
-}
-
-h3 {
-  font-weight: 500;
-  font-family: 'Fira Sans', sans-serif;
-  text-align: center;
-  margin: 0;
-  line-height: 1;
-  padding-bottom: 20px;
-  font-weight: bold;
-}
-
-.auth-inner {
+  /*Center the form*/
   margin: auto;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: left;
-  background: #ffffff;
-  width: 450px;
-   
-  padding: 30px 30px;
-  border-radius: 15px;
+
+  /*Add space surrouding form*/
+  padding: 20px 20px; 
+
+  /*Rounded corner*/
+  border-radius: 10px;
 }
 
+hr.style-six {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}

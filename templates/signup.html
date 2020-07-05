@@ -12,6 +12,8 @@
 
         <form action="{{ url_for('signup') }}" method="post" id="signup" class="auth-inner">
             <h3>Sign Up</h3>
+            <hr>
+            
             {{ form.csrf_token }}
 
             <fieldset class="form-group username">
