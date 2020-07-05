@@ -1,28 +1,26 @@
 {% extends "layout.html" %}
 
 {% block body %}
- 	<div class="d-flex flex-container">
-         <div class="p-2 bg-black text-white flex-wrap align-items-stretch" style="height: 100px">
-                <h1 class="text-uppercase font-weight-bold" style="text-align:center">Search Engine</h1>
-         </div>
+<div id="header">
+    <h1>Search Engine</h1>
+</div>
 
-            <div class="formwrapper">  
-                <div class="p-2 div1 flex-grow-1 flex-wrap ">
-                <form action="{{ url_for('search') }}" method="post" class="form-inline md-form mr-auto mb-4 center container">
-                    {{ form.csrf_token }}
-                    <h5 class="text-uppercase font-weight-bold text-white"> Search your favorite movie here </h5>
-                    <fieldset class="form-field">
-                        {{ form.query(class="form-control mr-sm-2", placeholder="Enter movie title") }}
-                    </fieldset>
-                    {{ form.submit(class="btn btn-outline-warning btn-rounded btn-sm my-0") }}
-                </form>
-                <div class="p-2 bg-black text-white flex-wrap align-items-stretch" style="height: 100px">
-                <p style="text-align:center"> Copyright @ 2020 Tu Vu, Duong Nguyen, University of Texas at Dallas<br></p>
-                <p style="text-align: center"> All rights reserved </p>
-                </div>
-                </div>
-                 
-    	   </div>
-        <!-- <a href="{{ url_for('logout') }}" style="font-size: 30px">Sign out</a> -->
-  	</div>
+<div id="content">
+    <h5> Search your favorite movie here </h5>
+    <form action="{{ url_for('search') }}" method="post" class="form-inline text-center">
+        {{ form.csrf_token }}
+        
+        <fieldset>
+            {{ form.query(class="form-control mr-2", placeholder="Enter movie title") }}
+        </fieldset>
+
+        {{ form.submit(class="btn btn-warning btn-sm") }}
+    </form>
+
+    <!-- <a href="{{ url_for('logout') }}" style="font-size: 30px">Sign out</a> -->
+    <div id="copyright">
+        <p> Copyright @ 2020 Tu Vu, Duong Nguyen, University of Texas at Dallas </p>
+        <p> All rights reserved </p>
+    </div>
+</div>
 {% endblock %}

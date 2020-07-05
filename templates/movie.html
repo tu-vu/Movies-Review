@@ -37,14 +37,16 @@
         <hr>
 
         {% for review in reviews %}
+ 
         <div class="card bg-light border-dark mb-3 row" style="align-self: center; width: 900px;">
         <div class="card-header"> <h4> Username: {{ review.author }}</h4></div>
         <div class="card-body">
         <h5 class="card-title">Grade: {{ review.rating }} </h5>
-        <p class="card-text">{{ review.text }}</p>
+        <p class="card-text">{{ review.text }}</p> 
+        <span id="time">{{ review.timestamp.strftime('%m-%d-%Y') }}</span>
         </div>
         </div>
-
+        
         {% endfor %}
     </div>
 {% endblock %}
