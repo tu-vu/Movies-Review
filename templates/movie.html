@@ -5,20 +5,22 @@
 {% endblock %}
 
 {% block body %}
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <img src="http://image.tmdb.org/t/p/w300/{{ movie_info['backdrop_path']}}">
+    <div class="d-flex flex-column container-fluid" id="movieStyle">
+        <div class="d-flex flex-column">
+            <div class="row">
+                <img src="http://image.tmdb.org/t/p/w300/{{ movie_info['backdrop_path']}}" class="image_center">
             </div>
-            <div class="col">
-                <h2>Overview</h2>
-                <p>{{ movie_info['overview'] }}</p>
+            <div class="card" style="width: 50%; align-self: center;">
+                <div class="card-body">
+                <h5 class="card-title text-center">Overview</h5>
+                <p class="card-text">{{ movie_info['overview'] }}</p>
+                </div>
             </div>
         </div>
 
-        <h3 style="text-align: left">User reviews</h3>
+        <h3 style="text-align: center;" class="text-white">User reviews</h3>
 
-        <form id="review" action="{{ url_for('movie', movie_id=movie_info['id'], movie_title=movie_info['title']) }}" method="post">
+        <form id="review" action="{{ url_for('movie', movie_id=movie_info['id'], movie_title=movie_info['title']) }}" method="post" class="text-center border border-light p-5" style="width: 900px; align-self: center; height: 200px;">
             {{ form.csrf_token }}
             
             <fieldset>
@@ -31,11 +33,17 @@
             {{ form.submit(class="btn btn-outline-success btn-rounded btn-sm my-0 mt-2 mb-5 text-right") }}
         </form>
 
+        <hr>
+
         {% for review in reviews %}
-            <h4>{{ review.author }}</h4>
-            <p class="text-info">{{ review.rating }}</p>
-            <p> {{ review.text }}</p>
-            <hr>
+        <div class="card bg-light border-dark mb-3 row" style="align-self: center; width: 900px;">
+        <div class="card-header"> <h4> Username: {{ review.author }}</h4></div>
+        <div class="card-body">
+        <h5 class="card-title">Grade: {{ review.rating }} </h5>
+        <p class="card-text">{{ review.text }}</p>
+        </div>
+        </div>
+
         {% endfor %}
     </div>
 {% endblock %}
