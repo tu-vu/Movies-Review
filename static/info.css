@@ -2,6 +2,7 @@
     display: flex;
   	flex-flow: column;
   	max-height: 100%;
+    width: 100%;
   	flex: 1 1 auto;
     background-image: url("https://images.unsplash.com/photo-1514306191717-452ec28c7814?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9");
     background-size: cover;
@@ -19,4 +20,11 @@ hr.style-two {
     border: 0;
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.divTextStyle{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: black;
 }
