@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  background-image: url('/static/images/home.jpg');
+  background-image: url('/static/img/home.jpg');
 
   /* Scale the size to fully cover parent(html) */
   height: 100%;
@@ -18,6 +18,12 @@ body {
   padding-top: 150px;
 
   font-family: 'Roboto', sans-serif;
+}
+
+#alert {
+  text-align: center;
+  width: 500px;
+  margin: auto;
 }
 
 form {
