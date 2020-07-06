@@ -1,8 +1,8 @@
 ############################ SET UP ############################
 from flask import Flask, url_for, render_template, request, redirect, flash
 from flask_login import LoginManager, current_user, login_user, login_required, logout_user
-from config import Config
 import requests
+from config import Config
 
 # Import all models
 from forms import *
