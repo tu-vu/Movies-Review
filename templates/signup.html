@@ -1,12 +1,14 @@
 {% extends "layout.html" %}
 
 {% block body %}
-{% for message in get_flashed_messages() %}
-    <div class="alert alert-warning">
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
-        {{ message }}
-    </div>
-{% endfor%}
+<div id="alert">
+    {% for message in get_flashed_messages() %}
+        <div class="alert alert-warning">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            {{ message }}
+        </div>
+    {% endfor%}  
+</div>
 
 <form action="{{ url_for('signup') }}" method="post" id="signup" class="auth-inner">
     <h3>Sign Up</h3>
