@@ -1,13 +1,19 @@
 {% extends "layout.html" %}
 
+{% block pagestyles %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='dist/css/search.css')}}">
+{% endblock %}
+
+{% block title %} My Website {% endblock %}
+
 {% block body %}
 <div id="header">
-    <h1>Search Engine <form action="{{ url_for('logout') }}" style="float: right"><button class="btn btn-outline-warning mb-3 btn-sm">Log out</button></form></h1>
+    <h1>Search Engine <form action="{{ url_for('auth_bp.logout') }}" style="float: right"><button class="btn btn-outline-warning mb-3 btn-sm">Log out</button></form></h1>
 </div>
 
 <div id="content">
     <h5> Search your favorite movie here</h5>
-    <form action="{{ url_for('search') }}" method="post" class="form-inline text-center">
+    <form action="{{ url_for('main_bp.search') }}" method="post" class="form-inline text-center">
         {{ form.csrf_token }}
         
         <fieldset>
@@ -17,7 +23,6 @@
         {{ form.submit(class="btn btn-warning btn-sm") }}
     </form>
 
-    <!-- <a href="{{ url_for('logout') }}" style="font-size: 30px">Sign out</a> -->
     <div id="copyright">
         <p> Copyright @ 2020 Tu Vu, Duong Nguyen, University of Texas at Dallas </p>
         <p> All rights reserved </p>

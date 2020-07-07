@@ -4,7 +4,7 @@
 	max-height: 100%;
   width: 100%;
 	flex: 1 1 auto;
-  background-image: url('/static/img/info.jpg');
+  background-image: url('/static/dist/img/info.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }

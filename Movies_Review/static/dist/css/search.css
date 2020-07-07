@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  background-image: url('/static/img/cinematic.jpg');
+  background-image: url('/static/dist/img/cinematic.jpg');
 
   /* Scale the size to fully cover parent(html) */
   height: 100%;

@@ -1,7 +1,7 @@
 from flask_wtf import FlaskForm
-from wtforms import SelectField, StringField, SubmitField, PasswordField, TextAreaField
+from wtforms import SelectField, StringField, TextField, SubmitField, PasswordField, TextAreaField
 from wtforms.fields.html5 import SearchField
-from wtforms.validators import DataRequired, Length, Email, EqualTo
+from wtforms.validators import DataRequired, Length, InputRequired, Email, EqualTo
 
 class SearchForm(FlaskForm):
     # [VARIABLE] = [FIELD TYPE]('[LABEL]', [validators=[VALIDATOR TYPE](message=('[ERROR MESSAGE'))])

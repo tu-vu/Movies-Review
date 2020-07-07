@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  background-image: url('/static/img/home.jpg');
+  background-image: url('/static/dist/img/home.jpg');
 
   /* Scale the size to fully cover parent(html) */
   height: 100%;

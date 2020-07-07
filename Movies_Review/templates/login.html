@@ -1,5 +1,11 @@
 {% extends "layout.html" %}
 
+{% block pagestyles %}
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='dist/css/home.css')}}">
+{% endblock %}
+
+{% block title %} My Website {% endblock %}
+
 {% block body %}
 <div id="alert">
     {% for message in get_flashed_messages() %}
@@ -10,7 +16,7 @@
     {% endfor%}  
 </div>
 
-<form action="{{ url_for('login') }}" method="post">
+<form action="{{ url_for('auth_bp.login') }}" method="post">
     <h3>Log In</h3>
     <hr>
 
@@ -42,6 +48,6 @@
 
     {{ form.submit(class="btn btn-primary btn-block") }}
 
-    <small id="emailHelp" class="form-text text-muted">Don't have an account? <a href="{{ url_for('signup') }}">Sign up.</a></small>
+    <small id="emailHelp" class="form-text text-muted">Don't have an account? <a href="{{ url_for('auth_bp.signup') }}">Sign up.</a></small>
 </form>
 {% endblock %}
