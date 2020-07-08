@@ -4,7 +4,7 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='dist/css/info.css')}}">
 {% endblock %}
 
-{% block title %} My Website {% endblock %}
+{% block title %} {{ movie_info['title'] }} Reviews - Moviebia {% endblock %}
 
 {% block body %}
     <div class="d-flex flex-column container-fluid" id="movieStyle">

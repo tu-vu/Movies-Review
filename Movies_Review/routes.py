@@ -43,7 +43,7 @@ def movies():
         return redirect(url_for('main_bp.search'))
 
     # Register movies page view to user
-    return render_template("movies.html", results=results)
+    return render_template("movies.html", results=results, query=query)
 
 @main_bp.route("/search/movies/<string:movie_title>", methods=["GET","POST"])
 @login_required
