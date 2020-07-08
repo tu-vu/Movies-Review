@@ -37,6 +37,11 @@ def movies():
     # Convert response into nice json format
     results = res.json()['results']
 
+    # Check if there are any result
+    if not results: # No result was found
+        flash("Sorry, we couldn't find any content for '" + query + "'")
+        return redirect(url_for('main_bp.search'))
+
     # Register movies page view to user
     return render_template("movies.html", results=results)
 

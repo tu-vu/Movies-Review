@@ -18,6 +18,12 @@ body {
   text-align: center;
 }
 
+#alert {
+  text-align: center;
+  width: 500px;
+  margin: auto;
+}
+
 #header {
   background-color: black;
 }

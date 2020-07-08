@@ -69,7 +69,7 @@ def login():
 @auth_bp.route("/logout")
 @login_required
 def logout():
-    ### User log-out logic. ###
+    """ User log-out logic. """
     logout_user()
     return redirect(url_for('auth_bp.login'))
 

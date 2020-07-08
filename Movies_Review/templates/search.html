@@ -11,6 +11,15 @@
     <h1>Search Engine <form action="{{ url_for('auth_bp.logout') }}" style="float: right"><button class="btn btn-outline-warning mb-3 btn-sm">Log out</button></form></h1>
 </div>
 
+<div id="alert">
+    {% for message in get_flashed_messages() %}
+        <div class="alert alert-warning">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            {{ message }}
+        </div>
+    {% endfor%}  
+</div>
+
 <div id="content">
     <h5> Search your favorite movie here</h5>
     <form action="{{ url_for('main_bp.search') }}" method="post" class="form-inline text-center">
