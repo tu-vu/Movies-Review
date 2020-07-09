@@ -1,6 +1,7 @@
 # Movies-Review
 
-![Python](https://img.shields.io/badge/Python-v3.8.3-0087d8?logo=python&logoColor=white)
+![Website](https://img.shields.io/website?down_color=cf000f&down_message=down&up_color=009944&up_message=up&url=http%3A%2F%2Fmoviebia.herokuapp.com%2F)
+![Python](https://img.shields.io/badge/Python-v3.8.3-0087d8?logo=python&logoColor=white&url=https://docs.python.org/3/)
 ![Flask](https://img.shields.io/badge/Flask-v1.1.2-a90606?logo=flask&logoColor=white)
 ![Flask-SQLAlchemy](https://img.shields.io/badge/Flask--SQLAlchemy-v2.4.3-a90606?logo=flask&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-v12.1-336791?logo=postgresql&logoColor=white)
