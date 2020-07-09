@@ -1,37 +1,26 @@
 # Movies-Review
-## Setup Guide (Use command line)
-1. Move to Movies-Review directory 
-2. pip install virtualenv
-3. pip install virtualenvwrapper-win
-2. mkvirtualenv Movies-Review
-3. setprojectdir
-4. pip install flask
-5. pip install SQLAlchemy
-6. pip install FlaskSQLAlchemy
-7. pip install psycopg2
-8. pip install requests
-9. pip install flask-login
-10. pip install flask flask-wtf
-11. pip install wtforms[email]
-12. pip install Flask-Security
 
-## Run Guide (Use command line)
-1. Move to Movies-Review directory
-2. Start cái virtual environment, gõ workon Movies-Review. (Để stop, gõ deactivate)
-3. set FLASK_APP=app.py (cái này hình như chỉ phải run first time)
-4. set FLASK_ENV=development (cái này để mỗi khi mình modify any file thì website nó sẽ auto-update, ko phải run lại)
-5. flask run (Bắt buộc phải chạy cái này everytime run app)
-6. Rồi copy cái URL http://127.0.0.1:5000/ lên browser và chạy :+1:
+![Python](https://img.shields.io/badge/Python-v3.8.3-0087d8?logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-v1.1.2-a90606?logo=flask&logoColor=white)
+![Flask-SQLAlchemy](https://img.shields.io/badge/Flask--SQLAlchemy-v2.4.3-a90606?logo=flask&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-v12.1-336791?logo=postgresql&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-v4-563D7C?logo=bootstrap&logoColor=white)
+![API](https://img.shields.io/badge/API-TMDB-01D277?logo=themoviedatabase&logoColor=white)
 
-## Update
-1. Changes to the app.css file including login style
-2. Changes to the layout.html include the new link to the app.css
-3. Changes to login page including the form new style, add new input to the form andmore
-4. Added working movie search page
-5. New changes to app.css for using new style
-6. Update to search.html and movies.html for new style
-7. Update new login and sign-up form
-8. Fix problem with search style
-9. Update again: Login and sign-up form
-10. Add user authentication functionality to website
-11. Change a little styling for testing purpose
+## Installation
+##### Installation via requirements.txt
+    cd Movies-Review
+    mkvirtualenv Movies-Review
+    pip3 install -r requirements.txt
+    flask run
+
+## Usage
+##### Create a .env file in project folder
+##### Replace the following values with yours in .env file
+* `FLASK_APP` = Entry point of the application(should be 'wsgi.py')
+* `FLASK_ENV` = Enable/Disable development omde by setting it to development/production
+* `SECRET_KEY` = Randomly generated string of characters used to encrypt your app's data.'
+* `DATABASE_URL`: URI of a SQL database
+* `API_KEY`: The API key can be accquired via [TMDB](https://developers.themoviedb.org/3/getting-started/introduction)
+* `DEBUG`: Enable/Disable debug mode by setting it to True/False
+* `TESTING`: Enable/Disable testing mode by setting it to True/False
