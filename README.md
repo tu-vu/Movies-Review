@@ -1,7 +1,7 @@
 # Movies-Review
 
 ![Website](https://img.shields.io/website?down_color=cf000f&down_message=down&up_color=009944&up_message=up&url=http%3A%2F%2Fmoviebia.herokuapp.com%2F)
-![Python](https://img.shields.io/badge/Python-v3.8.3-0087d8?logo=python&logoColor=white&url=https://docs.python.org/3/)
+![Python](https://img.shields.io/badge/Python-v3.8.3-0087d8?logo=python&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-v1.1.2-a90606?logo=flask&logoColor=white)
 ![Flask-SQLAlchemy](https://img.shields.io/badge/Flask--SQLAlchemy-v2.4.3-a90606?logo=flask&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-v12.1-336791?logo=postgresql&logoColor=white)
@@ -19,7 +19,7 @@
 ##### Create a .env file in project folder
 ##### Replace the following values with yours in .env file
 * `FLASK_APP` = Entry point of the application(should be 'wsgi.py')
-* `FLASK_ENV` = Enable/Disable development omde by setting it to development/production
+* `FLASK_ENV` = Enable/Disable development mode by setting it to development/production
 * `SECRET_KEY` = Randomly generated string of characters used to encrypt your app's data.'
 * `DATABASE_URL`: URI of a SQL database
 * `API_KEY`: The API key can be accquired via [TMDB](https://developers.themoviedb.org/3/getting-started/introduction)
