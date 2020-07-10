@@ -1,12 +1,12 @@
 # Movies-Review
 
-![Website](https://img.shields.io/website?down_color=cf000f&down_message=down&up_color=009944&up_message=up)
-![Python](https://img.shields.io/badge/Python-v3.8.3-0087d8?logo=python&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-v1.1.2-a90606?logo=flask&logoColor=white)
-![Flask-SQLAlchemy](https://img.shields.io/badge/Flask--SQLAlchemy-v2.4.3-a90606?logo=flask&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-v12.1-336791?logo=postgresql&logoColor=white)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-v4-563D7C?logo=bootstrap&logoColor=white)
-![API](https://img.shields.io/badge/API-TMDB-01D277?logo=themoviedatabase&logoColor=white)
+![Website](https://img.shields.io/website?down_color=cf000f&down_message=down&style=flat-square&up_color=009944&up_message=up&url=https%3A%2F%2Fmoviebia.herokuapp.com%2F)
+![Python](https://img.shields.io/badge/Python-v3.8.3-0087d8?logo=python&logoColor=white&style=flat-square)
+![Flask](https://img.shields.io/badge/Flask-v1.1.2-a90606?logo=flask&logoColor=white&style=flat-square)
+![Flask-SQLAlchemy](https://img.shields.io/badge/Flask--SQLAlchemy-v2.4.3-a90606?logo=flask&logoColor=white&style=flat-square)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-v12.1-336791?logo=postgresql&logoColor=white&style=flat-square)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-v4-563D7C?logo=bootstrap&logoColor=white&style=flat-square)
+![API](https://img.shields.io/badge/API-TMDB-01D277?logo=themoviedatabase&logoColor=white&style=flat-square)
 
 ## Installation
 ##### Installation via requirements.txt
