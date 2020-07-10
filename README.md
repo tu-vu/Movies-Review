@@ -20,9 +20,9 @@ Website found here: https://moviebia.herokuapp.com/
 ## Usage
 ##### Create a .env file in project folder
 ##### Replace the following values with yours in .env file
-* `FLASK_APP` = Entry point of the application(should be 'wsgi.py')
-* `FLASK_ENV` = Enable/Disable development mode by setting it to development/production
-* `SECRET_KEY` = Randomly generated string of characters used to encrypt your app's data.'
+* `FLASK_APP`: Entry point of the application(should be 'wsgi.py')
+* `FLASK_ENV`: Enable/Disable development mode by setting it to development/production
+* `SECRET_KEY`: Randomly generated string of characters used to encrypt your app's data.'
 * `DATABASE_URL`: URI of a SQL database
 * `API_KEY`: The API key can be accquired via [TMDB](https://developers.themoviedb.org/3/getting-started/introduction)
 * `DEBUG`: Enable/Disable debug mode by setting it to True/False
