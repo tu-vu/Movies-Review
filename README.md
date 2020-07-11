@@ -10,8 +10,8 @@
 Website found here: https://moviebia.herokuapp.com/  
 
 You can use the following credentials if you don't want to sign up:  
-Email: demo_account@gmail.com  
-Password: 123456
+- Email: demo_account@gmail.com  
+- Password: 123456
 
 ## Installation
 ##### Installation via requirements.txt
