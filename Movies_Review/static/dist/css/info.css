@@ -1,9 +1,9 @@
 #movieStyle{
   display: flex;
-	flex-flow: column;
-	max-height: 100%;
+  flex-flow: column;
+  max-height: 100%;
   width: 100%;
-	flex: 1 1 auto;
+  flex: 1 1 auto;
   background-image: url('/static/dist/img/info.jpg');
   background-size: cover;
   background-repeat: no-repeat;

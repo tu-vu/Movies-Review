@@ -27,7 +27,7 @@
             </div>
         </div>
 
-        <h3 style="text-align: center;" class="text-white">User reviews</h3>
+        <h3 style="text-align: center; margin-top: 50px;" class="text-white">User reviews</h3>
 
         <form id="review" action="{{ url_for('main_bp.movie', movie_id=movie_info['id'], movie_title=movie_info['title']) }}" method="post" class="text-center border border-light p-5" style="width: 900px; align-self: center; height: 200px;">
             {{ form.csrf_token }}
