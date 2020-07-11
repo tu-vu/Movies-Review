@@ -12,7 +12,13 @@
             <h1 style="text-align: center;" class="text-white"> {{ movie_info['title'] }} </h1>
         </div>
         <div class="d-flex flex-column">
-            <img src="http://image.tmdb.org/t/p/w780/{{ movie_info['backdrop_path']}}" class="image_center" onerror="this.src='https://thumbs.dreamstime.com/b/no-image-available-icon-photo-camera-flat-vector-illustration-132483141.jpg';">
+            <!-- Check if image is available -->
+            {% if movie_info['backdrop_path'] %}
+                <img src="http://image.tmdb.org/t/p/w780/{{ movie_info['backdrop_path'] }}" class="image_center">
+            {% else %}
+                <img src=" {{ url_for('static', filename='dist/img/noimage.png') }} " class="image_center">
+            {% endif %}
+            
             <div class="card" style="width: 50%; align-self: center;">
                 <div class="card-body">
                     <h5 class="card-title text-center">Overview</h5>
