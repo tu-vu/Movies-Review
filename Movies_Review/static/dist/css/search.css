@@ -26,6 +26,15 @@ body {
 
 #header {
   background-color: black;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+#header form {
+  position: absolute;
+  right: 0;
+  margin-top: 8px;
 }
 
 #header h1, h5{

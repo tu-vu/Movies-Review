@@ -8,7 +8,8 @@
 
 {% block body %}
 <div id="header">
-    <h1>Search Engine <form action="{{ url_for('auth_bp.logout') }}" style="float: right"><button class="btn btn-outline-warning mb-3 btn-sm">Log out</button></form></h1>
+    <h1>Search Engine</h1>
+    <form action="{{ url_for('auth_bp.logout') }}" method="get"><button class="btn btn-outline-warning btn-md">Log out</button></form>
 </div>
 
 <div id="alert">
