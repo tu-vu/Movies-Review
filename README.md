@@ -7,8 +7,8 @@
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-v4-563D7C?logo=bootstrap&logoColor=white&style=flat-square)
 ![API](https://img.shields.io/badge/API-TMDB-01D277?logo=themoviedatabase&logoColor=white&style=flat-square)
 
-![Demo1](Movies_Review\static\dist\img\demo1.png)
-![Demo2](Movies_Review\static\dist\img\demo2.png)
+![Demo1](demo1.png)
+![Demo2](demo2.png)
 
 Website found here: https://moviebia.herokuapp.com/  
 
