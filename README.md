@@ -33,3 +33,6 @@ You can use the following credentials if you don't want to sign up:
 * `API_KEY`: The API key can be accquired via [TMDB](https://developers.themoviedb.org/3/getting-started/introduction)
 * `DEBUG`: Enable/Disable debug mode by setting it to True/False
 * `TESTING`: Enable/Disable testing mode by setting it to True/False
+
+## Collaborator
+* @TenLaGi123
