@@ -35,4 +35,4 @@ You can use the following credentials if you don't want to sign up:
 * `TESTING`: Enable/Disable testing mode by setting it to True/False
 
 ## Collaborator
-* @TenLaGi123
+* [TenLaGi123](https://github.com/TenLaGi123)
